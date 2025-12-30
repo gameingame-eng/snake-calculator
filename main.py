@@ -15,8 +15,11 @@ def featureChoice():
         print("Running Games")
         runpy.run_path("features/GameHub/games.py")
     elif feature == "3":
+        print("running PySpell...")
+        runpy.run_path("features/PySpelling/dictionary.py")
+    elif feature == "4":
         runpy.run_path("dat.py")
-    elif feature == ("4"):
+    elif feature == ("5"):
         print("Thanks for using me!")
         print("Exiting PyHub....")
         s.exit(67)
@@ -75,8 +78,9 @@ print("Here is a list of available features with a corresponding number")
 time.sleep(1)
 print("1 - Snake Calculator")
 print("2 - Games")
-print("3 - Change Name")
-print("4 - exit")
+print("3 - Spell Checker")
+print("4 - Change Name")
+print("5 - exit")
 feature = input("What feature would you like to access? ")
 featureChoice()
 print("Thank you for using PyHub!")
