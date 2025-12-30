@@ -2,6 +2,7 @@ import os
 import webview  # New import
 import time
 from pathlib import Path
+import runpy as run
 
 
 def clear_screen():
@@ -55,12 +56,9 @@ def games_menu():
             launch_game("Drive_mad")
         elif choice == "3":
             print("Returning...")
-            break
+            run.run_path("./main.py")
+
         else:
             print("Invalid selection. Try again.")
             time.sleep(1)
-
-
-# Ensure this is NOT inside an 'if __name__ == "__main__":' block
-# so runpy can trigger it.
 games_menu()
